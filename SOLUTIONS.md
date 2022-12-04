@@ -3,7 +3,7 @@
 ## JavaScript/TypeScript
 <!-- JS/TS repos go here -->
 
-* [austinmccalley/aoc2022]
+* [austinmccalley/aoc2022](https://github.com/austinmccalley/aoc2022)
 * [g3ru1a/aoc2022](https://github.com/g3ru1a/aoc2022)
 
 ### Python

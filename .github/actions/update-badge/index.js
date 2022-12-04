@@ -33,7 +33,7 @@ let octokit
       }
     })
 
-    await core.group('Writing README...', () => {
+    await core.group('Writing SOLUTIONS...', () => {
       fs.writeFileSync(outputFile, lines.join('\n'))
       core.info(`Finished writing to ${outputFile}`)
     })
@@ -47,10 +47,8 @@ function extractRepositories(lines) {
 
   let collect = false
   lines.some((line, index) => {
-    if (line === '### Solutions') {
+    if (line === '# Solutions') {
       collect = true
-    } else if (line === '### Live Streams') {
-      collect = false
     } else if (collect) {
       const idx1 = line.indexOf('[')
       const idx2 = line.indexOf(']')
