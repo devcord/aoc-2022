@@ -8,8 +8,8 @@ let octokit
 (async function() {
   try {
     const ghToken = core.getInput('ghToken')
-    const inputFile = core.getInput('inputFile')
-    const outputFile = core.getInput('outputFile')
+    const inputFile = 'SOLUTIONS.md'
+    const outputFile = 'SOLUTIONS.md'
 
     const content = fs.readFileSync(inputFile, 'utf8')
     const lines = content.split('\n')
