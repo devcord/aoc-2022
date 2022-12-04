@@ -3,6 +3,8 @@
 ## JavaScript/TypeScript
 <!-- JS/TS repos go here -->
 
+* [austinmccalley/aoc2022]
+
 ### Python
 <!-- Python repos go here -->
 
