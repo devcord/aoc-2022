@@ -5,7 +5,8 @@ const endpoint = require('./endpoint')
 
 let octokit
 
-(async function() {
+/* Getting the GitHub token from the GitHub Actions workflow. */
+(async function () {
   try {
     const ghToken = core.getInput('ghToken')
 
@@ -41,9 +42,11 @@ let octokit
 function extractRepositories(lines) {
   const repos = []
 
+  const validStartLines = ['## JavaScript/TypeScript', '## Python', '## Rust', '## C/C++/C\#']
+
   let collect = false
   lines.some((line, index) => {
-    if (line === '# Solutions') {
+    if (validStartLines.includes(line)) {
       collect = true
     } else if (collect) {
       const idx1 = line.indexOf('[')
