@@ -5,18 +5,15 @@ const endpoint = require('./endpoint')
 
 let octokit
 
-(async function() {
+/* Getting the GitHub token from the GitHub Actions workflow. */
+(async function () {
   try {
     const ghToken = core.getInput('ghToken')
-    const inputFile = 'SOLUTIONS.md'
-    const outputFile = 'SOLUTIONS.md'
 
-    const content = fs.readFileSync(inputFile, 'utf8')
+    const content = fs.readFileSync('SOLUTIONS.md', 'utf8')
     const lines = content.split('\n')
     const repos = await core.group('Extracting repos...', () => extractRepositories(lines))
     core.info(`count=${repos.length}`)
-    core.info(`input=${inputFile}`)
-    core.info(`output=${outputFile}`)
 
     octokit = github.getOctokit(ghToken)
     await core.group('Fetching repositories & updating lines...', async () => {
@@ -34,8 +31,8 @@ let octokit
     })
 
     await core.group('Writing SOLUTIONS...', () => {
-      fs.writeFileSync(outputFile, lines.join('\n'))
-      core.info(`Finished writing to ${outputFile}`)
+      fs.writeFileSync('SOLUTIONS.md', lines.join('\n'))
+      core.info(`Finished writing to SOLUTIONS.md`)
     })
   } catch (error) {
     core.setFailed(error.message)
@@ -45,9 +42,11 @@ let octokit
 function extractRepositories(lines) {
   const repos = []
 
+  const validStartLines = ['## JavaScript/TypeScript', '## Python', '## Rust', '## C/C++/C\#']
+
   let collect = false
   lines.some((line, index) => {
-    if (line === '# Solutions') {
+    if (validStartLines.includes(line)) {
       collect = true
     } else if (collect) {
       const idx1 = line.indexOf('[')

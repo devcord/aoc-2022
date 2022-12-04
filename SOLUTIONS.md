@@ -1,16 +1,12 @@
 # SOLUTIONS
 
 ## JavaScript/TypeScript
-<!-- JS/TS repos go here -->
 
-* [austinmccalley/aoc2022](https://github.com/austinmccalley/aoc2022)
-* [g3ru1a/aoc2022](https://github.com/g3ru1a/aoc2022)
+* [austinmccalley/aoc2022](https://github.com/austinmccalley/aoc2022) ![Last Commit on GitHub](https://img.shields.io/badge/last%20commit-2022--12--04-brightgreen)
+* [g3ru1a/aoc2022](https://github.com/g3ru1a/aoc2022) ![Last Commit on GitHub](https://img.shields.io/badge/last%20commit-2022--12--04-brightgreen)
 
-### Python
-<!-- Python repos go here -->
+## Python
 
 ## Rust
-<!-- Rust repos go here -->
 
 ## C/C++/C\#
-<!-- C language repos go here-->
