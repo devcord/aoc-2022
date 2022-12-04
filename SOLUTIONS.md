@@ -11,5 +11,5 @@
 ## Rust
 <!-- Rust repos go here -->
 
-## C/C++/C#
+## C/C++/C\#
 <!-- C language repos go here-->
