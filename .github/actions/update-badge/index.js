@@ -15,6 +15,8 @@ let octokit
     const lines = content.split('\n')
     const repos = await core.group('Extracting repos...', () => extractRepositories(lines))
     core.info(`count=${repos.length}`)
+    core.info(`input=${inputFile}`)
+    core.info(`output=${outputFile}`)
 
     octokit = github.getOctokit(ghToken)
     await core.group('Fetching repositories & updating lines...', async () => {

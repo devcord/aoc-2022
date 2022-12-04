@@ -17,15 +17,15 @@ jobs:
           fetch-depth: 0
 
       - name: Install packages
-        run: yarn
+        run: npm install
         working-directory: ./.github/actions/update-badge
 
       - name: Use local action
         uses: ./.github/actions/update-badge
         with:
           ghToken: ${{ secrets.GITHUB_TOKEN }}
-          inputFile: README.md
-          outputFile: README.md
+          inputFile: SOLUTIONS.md
+          outputFile: SOLUTIONS.md
 
       - name: Git commit and push
         run: |

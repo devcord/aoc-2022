@@ -13,5 +13,5 @@ inputs:
     required: true
     default: 'README-badge.md'
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'index.js'
