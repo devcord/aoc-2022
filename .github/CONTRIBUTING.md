@@ -1,7 +1,4 @@
-# Advent of Code 2022 -- devcord
-
-Feel free to open Pull Requests on this repository to be able to add your solutions to the [SOLUTIONS.md](SOLUTIONS.md) file.
-
+# Contributing
 
 ## Adding your repository to the list
 
