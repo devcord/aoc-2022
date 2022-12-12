@@ -1,5 +1,8 @@
 # SOLUTIONS
 
+## PHP
+* [mikeroq/AdventOfCode](https://github.com/mikeroq/AdventOfCode) ![Last Commit on GitHub](https://img.shields.io/badge/last%20commit-2022--12--11-brightgreen)
+
 ## JavaScript/TypeScript
 
 * [austinmccalley/aoc2022](https://github.com/austinmccalley/aoc2022) ![Last Commit on GitHub](https://img.shields.io/badge/last%20commit-2022--12--12-brightgreen)

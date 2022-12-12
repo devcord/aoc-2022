@@ -42,7 +42,7 @@ let octokit
 function extractRepositories(lines) {
   const repos = []
 
-  const validStartLines = ['## JavaScript/TypeScript', '## Python', '## Rust', '## C/C++/C\#']
+  const validStartLines = ['## PHP', '## JavaScript/TypeScript', '## Python', '## Rust', '## C/C++/C\#']
 
   let collect = false
   lines.some((line, index) => {
